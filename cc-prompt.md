@@ -1,6 +1,6 @@
-# Claude Code Version 2.0.0
+# Claude Code Version 2.0.1
 
-Release Date: 2025-09-29
+Release Date: 2025-09-30
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-09-29T16:55:10.367Z is the date. Write a haiku about it.
+2025-09-30T02:46:19.156Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -164,11 +164,11 @@ The user will primarily request you perform software engineering tasks. This inc
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1759164907215-dnsko8
+Working directory: /tmp/claude-history-1759200375956-wy1xm9
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-09-29
+Today's date: 2025-09-30
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
