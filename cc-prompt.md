@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.75
+# Claude Code Version 2.0.76
 
-Release Date: 2025-12-20
+Release Date: 2025-12-22
 
 # User Message
 
-2025-12-20T18:26:45.172Z is the date. Write a haiku about it.
+2025-12-23T02:34:48.834Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -150,11 +150,11 @@ assistant: Clients are marked as failed in the `connectToServer` function in src
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1766255203271-64xvr1
+Working directory: /tmp/claude-history-1766457287079-9teg3h
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-12-20
+Today's date: 2025-12-23
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -1400,7 +1400,7 @@ Usage notes:
   - Web search is only available in the US
 
 IMPORTANT - Use the correct year in search queries:
-  - Today's date is 2025-12-20. You MUST use this year when searching for recent information, documentation, or current events.
+  - Today's date is 2025-12-23. You MUST use this year when searching for recent information, documentation, or current events.
   - Example: If today is 2025-07-15 and the user asks for "latest React docs", search for "React documentation 2025", NOT "React documentation 2024"
 
 {
