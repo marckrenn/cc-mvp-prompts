@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.43
+# Claude Code Flags 2.0.44
 
 ## Feature Gates
 
@@ -33,6 +33,7 @@
 - `sonnet_1m_default`
 - `sonnet_45_1m_header`
 - `tengu_cap_grep_results`
+- `tengu_effort_exp`
 - `tengu_file_edit_optimization`
 - `tengu_haiku_default_pro_plan`
 - `tool_use_examples`
