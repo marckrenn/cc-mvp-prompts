@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.51
+# Claude Code Flags 2.0.52
 
 ## Feature Gates
 
@@ -28,6 +28,7 @@
 - `cc_onboarding_hide_workspace`
 - `cc_onboarding_init_modal`
 - `claude_code_overages_upgrade_cta`
+- `claude_code_usage_show_extra_usage`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
 - `sonnet_1m_default`
