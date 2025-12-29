@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.23
+# Claude Code Flags 2.0.24
 
 ## Feature Gates
 
@@ -26,6 +26,8 @@
 - `cc_onboarding_init_modal`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
+- `sonnet_1m_default`
 - `sonnet_45_1m_header`
+- `tengu_haiku_default_pro_plan`
 - `thinking_on_default`
 - `trust_folder_dialog_copy`
