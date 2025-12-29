@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.21
+# Claude Code Version 1.0.22
 
-Release Date: 2025-06-11
+Release Date: 2025-06-12
 
 # User Message
 
@@ -176,7 +176,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179775798-rjeltw
+Working directory: /tmp/claude-history-1754179780961-0plnqj
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -242,6 +242,8 @@ Usage notes:
     </bad-example>
 
 
+
+
 ### Committing changes with git
 
 When the user asks you to create a new git commit, follow these steps carefully:
@@ -266,8 +268,8 @@ When the user asks you to create a new git commit, follow these steps carefully:
 
 Important notes:
 - NEVER update the git config
-- DO NOT run additional commands to read or explore code, beyond what is available in the git context
-- DO NOT use the TodoWrite or Task tools
+- NEVER run additional commands to read or explore code, besides git bash commands
+- NEVER use the TodoWrite or Task tools
 - DO NOT push to the remote repository unless the user explicitly asks you to do so
 - IMPORTANT: Never use git commands with the -i flag (like git rebase -i or git add -i) since they require interactive input which is not supported.
 - If there are no changes to commit (i.e., no untracked files and no modifications), do not create an empty commit
@@ -599,9 +601,12 @@ Completely replaces the contents of a specific cell in a Jupyter notebook (.ipyn
       "type": "string",
       "description": "The absolute path to the Jupyter notebook file to edit (must be absolute, not relative)"
     },
-    "cell_number": {
-      "type": "number",
-      "description": "The index of the cell to edit (0-based)"
+    "cell_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The ID of the cell to edit. When inserting a new cell, the new cell will be inserted after the cell with this ID. Use `null` to insert at the beginning."
     },
     "new_source": {
       "type": "string",
@@ -627,7 +632,7 @@ Completely replaces the contents of a specific cell in a Jupyter notebook (.ipyn
   },
   "required": [
     "notebook_path",
-    "cell_number",
+    "cell_id",
     "new_source"
   ],
   "additionalProperties": false,
@@ -645,6 +650,10 @@ Reads a Jupyter notebook (.ipynb file) and returns all of the cells with their o
     "notebook_path": {
       "type": "string",
       "description": "The absolute path to the Jupyter notebook file to read (must be absolute, not relative)"
+    },
+    "cell_id": {
+      "type": "string",
+      "description": "The ID of a specific cell to read. If not provided, all cells will be read."
     }
   },
   "required": [
