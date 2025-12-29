@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.25
+# Claude Code Version 2.0.26
 
-Release Date: 2025-10-21
+Release Date: 2025-10-23
 
 # User Message
 
-2025-10-21T21:37:49.463Z is the date. Write a haiku about it.
+2025-10-23T23:05:11.346Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -110,11 +110,11 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1761082666700-06t5bs
+Working directory: /tmp/claude-history-1761260708080-k60izo
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-10-21
+Today's date: 2025-10-23
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -293,7 +293,7 @@ Important:
       "type": "boolean",
       "description": "Set to true to run this command in the background. Use BashOutput to read the output later."
     },
-    "dangerouslyOverrideSandbox": {
+    "dangerouslyDisableSandbox": {
       "type": "boolean",
       "description": "Set this to true to dangerously override sandbox mode and run commands without sandboxing."
     }

@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.25
+# Claude Code Flags 2.0.26
 
 ## Feature Gates
 
@@ -29,5 +29,4 @@
 - `sonnet_1m_default`
 - `sonnet_45_1m_header`
 - `tengu_haiku_default_pro_plan`
-- `thinking_on_default`
 - `trust_folder_dialog_copy`
