@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.24
+# Claude Code Version 1.0.25
 
-Release Date: 2025-06-14
+Release Date: 2025-06-16
 
 # User Message
 
@@ -176,7 +176,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179791235-14per1
+Working directory: /tmp/claude-history-1754179796369-vs0e7c
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -714,6 +714,7 @@ When NOT to use the Agent tool:
 - If you are searching for a specific class definition like "class Foo", use the Glob tool instead, to find the match more quickly
 - If you are searching for code within a specific file or set of 2-3 files, use the Read tool instead of the Agent tool, to find the match more quickly
 - Writing code and running bash commands (use other tools for that)
+- Other tasks that are not related to searching for a keyword or file
 
 Usage notes:
 1. Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses
