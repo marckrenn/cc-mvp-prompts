@@ -1,8 +1,7 @@
-# Claude Code Flags 1.0.70
+# Claude Code Flags 1.0.71
 
 ## Feature Gates
 
-- `cc_sr`
 - `claude_code_unicode_sanitize`
 - `force_local_installation_migration`
 - `tengu_metrics_exporter_enabled`
