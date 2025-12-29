@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.41
+# Claude Code Version 1.0.42
 
-Release Date: 2025-07-02
+Release Date: 2025-07-03
 
 # User Message
 
@@ -165,6 +165,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 ## Tool usage policy
 - When doing file search, prefer to use the Task tool in order to reduce context usage.
+- When WebFetch returns a message about a redirect to a different host, you should immediately make a new WebFetch request with the redirect URL provided in the response.
 - You have the capability to call multiple tools in a single response. When multiple independent pieces of information are requested, batch your tool calls together for optimal performance. When making multiple bash tool calls, you MUST send a single message with multiple tools calls to run the calls in parallel. For example, if you need to run "git status" and "git diff", send a single message with two tool calls to run the calls in parallel.
 
 You MUST answer concisely with fewer than 4 lines of text (not including tool use or code generation), unless user asks for detail.
@@ -172,7 +173,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179876109-ue4wz8
+Working directory: /tmp/claude-history-1754179883730-xqyav8
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -1019,6 +1020,7 @@ Usage notes:
   - This tool is read-only and does not modify any files
   - Results may be summarized if the content is very large
   - Includes a self-cleaning 15-minute cache for faster responses when repeatedly accessing the same URL
+  - When a URL redirects to a different host, the tool will inform you and provide the redirect URL in a special format. You should then make a new WebFetch request with the redirect URL to fetch the content.
 
 {
   "type": "object",
