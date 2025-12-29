@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.49
+# Claude Code Version 2.0.50
 
 Release Date: 2025-11-21
 
 # User Message
 
-2025-11-21T01:31:23.884Z is the date. Write a haiku about it.
+2025-11-21T23:14:28.001Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -130,7 +130,7 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1763688681384-mo4oaz
+Working directory: /tmp/claude-history-1763766865439-biqf8j
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
@@ -1133,9 +1133,21 @@ Usage notes:
 
 - Allows Claude to search the web and use the results to inform responses
 - Provides up-to-date information for current events and recent data
-- Returns search result information formatted as search result blocks
+- Returns search result information formatted as search result blocks, including links as markdown hyperlinks
 - Use this tool for accessing information beyond Claude's knowledge cutoff
 - Searches are performed automatically within a single API call
+
+CRITICAL REQUIREMENT - You MUST follow this:
+  - After answering the user's question, you MUST include a "Sources:" section at the end of your response
+  - In the Sources section, list all relevant URLs from the search results as markdown hyperlinks: [Title](URL)
+  - This is MANDATORY - never skip including sources in your response
+  - Example format:
+
+    [Your answer here]
+
+    Sources:
+    - [Source Title 1](https://example.com/1)
+    - [Source Title 2](https://example.com/2)
 
 Usage notes:
   - Domain filtering is supported to include or block specific websites
