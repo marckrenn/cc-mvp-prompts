@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.69
+# Claude Code Version 1.0.79
 
-Release Date: 2025-08-05
+Release Date: 2025-08-13
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-hey
+2025-08-14T12:52:02.414Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -64,7 +64,7 @@ assistant: ls
 
 <example>
 user: what command should I run to watch files in the current directory?
-assistant: [use the ls tool to list the files in the current directory, then read docs/commands in the relevant file to find out how to watch files]
+assistant: [runs ls to list the files in the current directory, then read docs/commands in the relevant file to find out how to watch files]
 npm run dev
 </example>
 
@@ -178,11 +178,11 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /private/var/folders/nc/j4jwgm8517z_pm8q9nw5jk9h0000gn/T/claude-history-1754471812545-juvc8n
+Working directory: /tmp/claude-history-1755175918994-6c8phk
 Is directory a git repo: No
-Platform: darwin
-OS Version: Darwin 24.1.0
-Today's date: 2025-08-06
+Platform: linux
+OS Version: Linux 6.8.0-71-generic
+Today's date: 2025-08-14
 </env>
 You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
@@ -232,6 +232,7 @@ Usage notes:
   - You can specify an optional timeout in milliseconds (up to 600000ms / 10 minutes). If not specified, commands will timeout after 120000ms (2 minutes).
   - It is very helpful if you write a clear, concise description of what this command does in 5-10 words.
   - If the output exceeds 30000 characters, output will be truncated before being returned to you.
+  - You can use the `run_in_background` parameter to run the command in the background, which allows you to continue working while the command runs. You can monitor the output using the Bash tool as it becomes available. Never use `run_in_background` to run 'sleep' as it will return immediately. You do not need to use '&' at the end of the command when using this parameter.
   - VERY IMPORTANT: You MUST avoid using search commands like `find` and `grep`. Instead use Grep, Glob, or Task to search. You MUST avoid read tools like `cat`, `head`, `tail`, and `ls`, and use Read and LS to read files.
  - If you _still_ need to run `grep`, STOP. ALWAYS USE ripgrep at `rg` first, which all Claude Code users have pre-installed.
   - When issuing multiple commands, use the ';' or '&&' operator to separate them. DO NOT use newlines (newlines are ok in quoted strings).
@@ -336,10 +337,46 @@ Important:
     "description": {
       "type": "string",
       "description": " Clear, concise description of what this command does in 5-10 words. Examples:\nInput: ls\nOutput: Lists files in current directory\n\nInput: git status\nOutput: Shows working tree status\n\nInput: npm install\nOutput: Installs package dependencies\n\nInput: mkdir foo\nOutput: Creates directory 'foo'"
+    },
+    "run_in_background": {
+      "type": "boolean",
+      "description": "Set to true to run this command in the background. Use BashOutput to read the output later."
     }
   },
   "required": [
     "command"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
+
+---
+
+## BashOutput
+
+
+- Retrieves output from a running or completed background bash shell
+- Takes a shell_id parameter identifying the shell
+- Always returns only new output since the last check
+- Returns stdout and stderr output along with shell status
+- Supports optional regex filtering to show only lines matching a pattern
+- Use this tool when you need to monitor or check the output of a long-running shell
+- Shell IDs can be found using the /bashes command
+
+{
+  "type": "object",
+  "properties": {
+    "bash_id": {
+      "type": "string",
+      "description": "The ID of the background shell to retrieve output from"
+    },
+    "filter": {
+      "type": "string",
+      "description": "Optional regular expression to filter the output lines. Only lines matching this regex will be included in the result. Any lines that do not match will no longer be available to read."
+    }
+  },
+  "required": [
+    "bash_id"
   ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
@@ -517,6 +554,32 @@ A powerful search tool built on ripgrep
   },
   "required": [
     "pattern"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
+
+---
+
+## KillBash
+
+
+- Kills a running background bash shell by its ID
+- Takes a shell_id parameter identifying the shell to kill
+- Returns a success or failure status 
+- Use this tool when you need to terminate a long-running shell
+- Shell IDs can be found using the /bashes command
+
+{
+  "type": "object",
+  "properties": {
+    "shell_id": {
+      "type": "string",
+      "description": "The ID of the background shell to kill"
+    }
+  },
+  "required": [
+    "shell_id"
   ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
@@ -735,6 +798,8 @@ Launch a new agent to handle complex, multi-step tasks autonomously.
 
 Available agent types and the tools they have access to:
 - general-purpose: General-purpose agent for researching complex questions, searching for code, and executing multi-step tasks. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries use this agent to perform the search for you. (Tools: *)
+- statusline-setup: Use this agent to configure the user's Claude Code status line setting. (Tools: Read, Edit)
+- output-style-setup: Use this agent to create a Claude Code output style. (Tools: Read, Write, Edit, Glob, LS)
 
 When using the Task tool, you must specify a subagent_type parameter to select which agent type to use.
 
