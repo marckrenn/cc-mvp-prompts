@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.67
+# Claude Code Flags 2.0.68
 
 ## Feature Gates
 
@@ -16,6 +16,7 @@
 - `tengu_sm_compact`
 - `tengu_streaming_tool_execution2`
 - `tengu_sumi`
+- `tengu_thinkback`
 - `tengu_tool_pear`
 - `tengu_tool_result_persistence`
 - `tengu_vscode_review_upsell`
