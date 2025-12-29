@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.64
+# Claude Code Version 2.0.65
 
-Release Date: 2025-12-10
+Release Date: 2025-12-11
 
 # User Message
 
-2025-12-10T02:32:16.540Z is the date. Write a haiku about it.
+2025-12-11T09:56:21.238Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -147,11 +147,11 @@ assistant: Clients are marked as failed in the `connectToServer` function in src
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1765333934689-zh7erp
+Working directory: /tmp/claude-history-1765446979364-wui02p
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-12-10
+Today's date: 2025-12-11
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -163,41 +163,6 @@ The most recent frontier Claude model is Claude Opus 4.5 (model ID: 'claude-opus
 
 
 # Tools
-
-## AgentOutputTool
-
-- Retrieves output from a completed async agent task by agentId
-- Provide a single agentId
-- If you want to check on the agent's progress call AgentOutputTool with block=false to get an immediate update on the agent's status
-- If you run out of things to do and the agent is still running - call AgentOutputTool with block=true to idle and wait for the agent's result (do not use block=true unless you completely run out of things to do as it will waste time)
-{
-  "type": "object",
-  "properties": {
-    "agentId": {
-      "type": "string",
-      "description": "The agent ID to retrieve results for"
-    },
-    "block": {
-      "type": "boolean",
-      "default": true,
-      "description": "Whether to block until results are ready"
-    },
-    "wait_up_to": {
-      "type": "number",
-      "minimum": 0,
-      "maximum": 300,
-      "default": 150,
-      "description": "Maximum time to wait in seconds"
-    }
-  },
-  "required": [
-    "agentId"
-  ],
-  "additionalProperties": false,
-  "$schema": "http://json-schema.org/draft-07/schema#"
-}
-
----
 
 ## Bash
 
@@ -352,7 +317,7 @@ Important:
     },
     "run_in_background": {
       "type": "boolean",
-      "description": "Set to true to run this command in the background. Use BashOutput to read the output later."
+      "description": "Set to true to run this command in the background. Use TaskOutput to read the output later."
     },
     "dangerouslyDisableSandbox": {
       "type": "boolean",
@@ -361,38 +326,6 @@ Important:
   },
   "required": [
     "command"
-  ],
-  "additionalProperties": false,
-  "$schema": "http://json-schema.org/draft-07/schema#"
-}
-
----
-
-## BashOutput
-
-
-- Retrieves output from a running or completed background bash shell
-- Takes a bash_id parameter identifying the shell
-- Always returns only new output since the last check
-- Returns stdout and stderr output along with shell status
-- Supports optional regex filtering to show only lines matching a pattern
-- Use this tool when you need to monitor or check the output of a long-running shell
-- Shell IDs can be found using the /tasks command
-
-{
-  "type": "object",
-  "properties": {
-    "bash_id": {
-      "type": "string",
-      "description": "The ID of the background shell to retrieve output from"
-    },
-    "filter": {
-      "type": "string",
-      "description": "Optional regular expression to filter the output lines. Only lines matching this regex will be included in the result. Any lines that do not match will no longer be available to read."
-    }
-  },
-  "required": [
-    "bash_id"
   ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
@@ -677,7 +610,7 @@ A powerful search tool built on ripgrep
     },
     "head_limit": {
       "type": "number",
-      "description": "Limit output to first N lines/entries, equivalent to \"| head -N\". Works across all output modes: content (limits output lines), files_with_matches (limits file paths), count (limits count entries). Defaults based on \"cap\" experiment value: 0 (unlimited), 20, or 100."
+      "description": "Limit output to first N lines/entries, equivalent to \"| head -N\". Works across all output modes: content (limits output lines), files_with_matches (limits file paths), count (limits count entries). Defaults to 0 (unlimited)."
     },
     "offset": {
       "type": "number",
@@ -918,7 +851,7 @@ When NOT to use the Task tool:
 Usage notes:
 - Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses
 - When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result.
-- You can optionally run agents in the background using the run_in_background parameter. When an agent runs in the background, you will need to use AgentOutputTool to retrieve its results once it's done. You can continue to work while background agents run - When you need their results to continue you can use AgentOutputTool in blocking mode to pause and wait for their results.
+- You can optionally run agents in the background using the run_in_background parameter. When an agent runs in the background, you will need to use TaskOutput to retrieve its results once it's done. You can continue to work while background agents run - When you need their results to continue you can use TaskOutput in blocking mode to pause and wait for their results.
 - Agents can be resumed using the `resume` parameter by passing the agent ID from a previous invocation. When resumed, the agent continues with its full previous context preserved. When NOT resuming, each invocation starts fresh and you should provide a detailed task description with all necessary context.
 - When the agent is done, it will return a single message back to you along with its agent ID. You can use this ID to resume the agent later if needed for follow-up work.
 - Provide clear, detailed prompts so the agent can work autonomously and return exactly the information you need.
@@ -994,13 +927,51 @@ assistant: "I'm going to use the Task tool to launch the greeting-responder agen
     },
     "run_in_background": {
       "type": "boolean",
-      "description": "Set to true to run this agent in the background. Use AgentOutputTool to read the output later."
+      "description": "Set to true to run this agent in the background. Use TaskOutput to read the output later."
     }
   },
   "required": [
     "description",
     "prompt",
     "subagent_type"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
+
+---
+
+## TaskOutput
+
+- Retrieves output from a running or completed task (background shell, agent, or remote session)
+- Takes a task_id parameter identifying the task
+- Returns the task output along with status information
+- Use block=true (default) to wait for task completion
+- Use block=false for non-blocking check of current status
+- Task IDs can be found using the /tasks command
+- Works with all task types: background shells, async agents, and remote sessions
+{
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "The task ID to get output from"
+    },
+    "block": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to wait for completion"
+    },
+    "timeout": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 600000,
+      "default": 30000,
+      "description": "Max wait time in ms"
+    }
+  },
+  "required": [
+    "task_id"
   ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
@@ -1306,7 +1277,7 @@ Usage notes:
   - Web search is only available in the US
 
 IMPORTANT - Use the correct year in search queries:
-  - Today's date is 2025-12-10. You MUST use this year when searching for recent information, documentation, or current events.
+  - Today's date is 2025-12-11. You MUST use this year when searching for recent information, documentation, or current events.
   - Example: If today is 2025-07-15 and the user asks for "latest React docs", search for "React documentation 2025", NOT "React documentation 2024"
 
 {

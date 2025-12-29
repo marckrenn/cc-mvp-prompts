@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.64
+# Claude Code Flags 2.0.65
 
 ## Feature Gates
 
@@ -18,7 +18,6 @@
 - `tengu_tool_pear`
 - `tengu_tool_result_persistence`
 - `tengu_vscode_review_upsell`
-- `tengu_web_tasks`
 
 ## Dynamic Configs
 
@@ -29,12 +28,11 @@
 
 - `cache_warming`
 - `cc_microcompact_ext`
-- `claude_code_overages_upgrade_cta`
+- `hide_overages_option_at_rate_limit_hit`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
 - `sonnet_1m_default`
 - `sonnet_45_1m_header`
-- `tengu_cap_grep_results`
 - `tengu_deep_ocean_current`
 - `tengu_effort_exp`
 - `tengu_file_edit_optimization`
