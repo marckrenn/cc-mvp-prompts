@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.42
+# Claude Code Flags 2.0.43
 
 ## Feature Gates
 
@@ -14,6 +14,7 @@
 - `tengu_native_installation`
 - `tengu_streaming_tool_execution`
 - `tengu_tool_pear`
+- `tengu_vscode_review_upsell`
 
 ## Dynamic Configs
 
