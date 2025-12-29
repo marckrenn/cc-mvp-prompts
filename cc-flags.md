@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.11
+# Claude Code Flags 2.0.12
 
 ## Feature Gates
 
@@ -6,11 +6,8 @@
 - `cache_warming`
 - `cc_microcompact_ext`
 - `cc_onboarding_github`
-- `cc_onboarding_hide_claudemd`
-- `cc_onboarding_hide_questions_changes`
-- `cc_onboarding_hide_terminal`
 - `cc_onboarding_hide_workspace`
-- `cc_plan_mode_first_session`
+- `cc_onboarding_init_modal`
 - `force_local_installation_migration`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
