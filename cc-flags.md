@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.54
+# Claude Code Flags 2.0.55
 
 ## Feature Gates
 
@@ -10,6 +10,7 @@
 - `tengu_gha_plugin_code_review`
 - `tengu_log_1p_events`
 - `tengu_native_installation`
+- `tengu_show_extra_usage_bar`
 - `tengu_streaming_tool_execution`
 - `tengu_tool_pear`
 - `tengu_vscode_review_upsell`
@@ -28,7 +29,6 @@
 - `cc_onboarding_hide_workspace`
 - `cc_onboarding_init_modal`
 - `claude_code_overages_upgrade_cta`
-- `claude_code_usage_show_extra_usage`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
 - `sonnet_1m_default`
