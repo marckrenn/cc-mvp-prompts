@@ -1,4 +1,4 @@
-# Claude Code Flags 1.0.126
+# Claude Code Flags 1.0.127
 
 ## Feature Gates
 
@@ -15,11 +15,10 @@
 - `max_user_opusplan`
 - `new_max_user_default_model`
 - `tengu_ant_prompts`
-- `tengu_auto_checkpointing`
-- `tengu_disable_bypass_permissions_mode`
+- `tengu_external_model_override`
 - `tengu_native_installation`
+- `tengu_sandbox_disabled_commands`
 - `tengu_show_all_subscription_types`
-- `tengu_use_file_checkpoints`
 
 ## Dynamic Configs
 
