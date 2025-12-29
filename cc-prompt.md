@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.86
+# Claude Code Version 1.0.87
 
-Release Date: 2025-08-20
+Release Date: 2025-08-21
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-08-20T23:36:03.534Z is the date. Write a haiku about it.
+2025-08-22T01:29:16.926Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -31,9 +31,7 @@ If the user asks for help or wants to give feedback inform them of the following
 - /help: Get help with using Claude Code
 - To give feedback, users should report the issue at https://github.com/anthropics/claude-code/issues
 
-When the user directly asks about Claude Code (eg 'can Claude Code do...', 'does Claude Code have...') or asks in second person (eg 'are you able...', 'can you do...'), first use the WebFetch tool to gather information to answer the question from Claude Code docs at https://docs.anthropic.com/en/docs/claude-code.
-  - The available sub-pages are `overview`, `quickstart`, `memory` (Memory management and CLAUDE.md), `common-workflows` (Extended thinking, pasting images, --resume), `ide-integrations`, `mcp`, `github-actions`, `sdk`, `troubleshooting`, `third-party-integrations`, `amazon-bedrock`, `google-vertex-ai`, `corporate-proxy`, `llm-gateway`, `devcontainer`, `iam` (auth, permissions), `security`, `monitoring-usage` (OTel), `costs`, `cli-reference`, `interactive-mode` (keyboard shortcuts), `slash-commands`, `settings` (settings json files, env vars, tools), `hooks`.
-  - Example: https://docs.anthropic.com/en/docs/claude-code/cli-usage
+When the user directly asks about Claude Code (eg. "can Claude Code do...", "does Claude Code have..."), or asks in second person (eg. "are you able...", "can you do..."), or asks how to use a specific Claude Code feature (eg. implement a hook, or write a slash command), use the WebFetch tool to gather information to answer the question from Claude Code docs. The list of available docs is available at https://docs.anthropic.com/en/docs/claude-code/claude_code_docs_map.md.
 
 ## Tone and style
 You should be concise, direct, and to the point.
@@ -178,11 +176,11 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1755732961294-e96uc7
+Working directory: /tmp/claude-history-1755826154089-e02yza
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-08-20
+Today's date: 2025-08-22
 </env>
 You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
