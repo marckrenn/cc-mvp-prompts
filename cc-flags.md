@@ -1,10 +1,10 @@
-# Claude Code Flags 1.0.22
+# Claude Code Flags 1.0.23
 
 ## Feature Gates
 
 - `claude_code_unicode_sanitize`
 - `force_local_installation_migration`
-- `tengu_remote_mcp`
+- `tengu_native_installation`
 
 ## Dynamic Configs
 

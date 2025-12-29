@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.22
+# Claude Code Version 1.0.23
 
-Release Date: 2025-06-12
+Release Date: 2025-06-13
 
 # User Message
 
@@ -176,11 +176,11 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179780961-0plnqj
+Working directory: /tmp/claude-history-1754179785920-75l543
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
-Today's date: 8/3/2025
+Today's date: 2025-08-03
 </env>
 You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
@@ -294,7 +294,7 @@ IMPORTANT: When the user asks you to create a pull request, follow these steps c
    - Run a git status command to see all untracked files
    - Run a git diff command to see both staged and unstaged changes that will be committed
    - Check if the current branch tracks a remote branch and is up to date with the remote, so you know if you need to push to the remote
-   - Run a git log command and `git diff main...HEAD` (or master...HEAD) to understand the full commit history for the current branch (from the time it diverged from the `main` branch)
+   - Run a git log command and `git diff [base-branch]...HEAD` to understand the full commit history for the current branch (from the time it diverged from the base branch)
 2. Analyze all changes that will be included in the pull request, making sure to look at all relevant commits (NOT just the latest commit, but ALL commits that will be included in the pull request!!!), and draft a pull request summary
 3. You have the capability to call multiple tools in a single response. When multiple independent pieces of information are requested, batch your tool calls together for optimal performance. ALWAYS run the following commands in parallel:
    - Create new branch if needed
@@ -602,11 +602,8 @@ Completely replaces the contents of a specific cell in a Jupyter notebook (.ipyn
       "description": "The absolute path to the Jupyter notebook file to edit (must be absolute, not relative)"
     },
     "cell_id": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "description": "The ID of the cell to edit. When inserting a new cell, the new cell will be inserted after the cell with this ID. Use `null` to insert at the beginning."
+      "type": "string",
+      "description": "The ID of the cell to edit. When inserting a new cell, the new cell will be inserted after the cell with this ID, or at the beginning if not specified."
     },
     "new_source": {
       "type": "string",
@@ -632,7 +629,6 @@ Completely replaces the contents of a specific cell in a Jupyter notebook (.ipyn
   },
   "required": [
     "notebook_path",
-    "cell_id",
     "new_source"
   ],
   "additionalProperties": false,
