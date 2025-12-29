@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.37
+# Claude Code Version 1.0.38
 
-Release Date: 2025-06-27
+Release Date: 2025-06-30
 
 # User Message
 
@@ -148,7 +148,7 @@ I've found some existing telemetry code. Let me mark the first todo as in_progre
 </example>
 
 
-false
+Users may configure 'hooks', shell commands that execute in response to events like tool calls, in settings. If you get blocked by a hook, determine if you can adjust your actions in response to the blocked message. If not, ask the user to check their hooks configuration.
 
 ## Doing tasks
 The user will primarily request you perform software engineering tasks. This includes solving bugs, adding new functionality, refactoring code, explaining code, and more. For these tasks the following steps are recommended:
@@ -172,7 +172,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179856478-1tkgpl
+Working directory: /tmp/claude-history-1754179861260-vqddfe
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
