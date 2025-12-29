@@ -1,12 +1,14 @@
-# Claude Code Flags 2.0.69
+# Claude Code Flags 2.0.70
 
 ## Feature Gates
 
 - `auto_migrate_to_native`
 - `code_slack_app_install_banner`
+- `tengu_ant_attribution_header_new`
 - `tengu_bash_command_backgrounded`
 - `tengu_bash_command_timeout_backgrounded`
 - `tengu_c4w_usage_limit_notifications_enabled`
+- `tengu_clawd_openfire`
 - `tengu_compact_mc_files`
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_gha_plugin_code_review`
