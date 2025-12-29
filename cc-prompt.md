@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.31
+# Claude Code Version 2.0.32
 
-Release Date: 2025-10-31
+Release Date: 2025-11-03
 
 # User Message
 
-2025-10-31T22:06:48.873Z is the date. Write a haiku about it.
+2025-11-03T23:25:50.037Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -111,11 +111,11 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1761948405687-7noqbk
+Working directory: /tmp/claude-history-1762212346763-9gi1dw
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-10-31
+Today's date: 2025-11-03
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -502,7 +502,7 @@ A powerful search tool built on ripgrep
     },
     "-n": {
       "type": "boolean",
-      "description": "Show line numbers in output (rg -n). Requires output_mode: \"content\", ignored otherwise."
+      "description": "Show line numbers in output (rg -n). Requires output_mode: \"content\", ignored otherwise. Defaults to true."
     },
     "-i": {
       "type": "boolean",
@@ -514,7 +514,11 @@ A powerful search tool built on ripgrep
     },
     "head_limit": {
       "type": "number",
-      "description": "Limit output to first N lines/entries, equivalent to \"| head -N\". Works across all output modes: content (limits output lines), files_with_matches (limits file paths), count (limits count entries). When unspecified, shows all results from ripgrep."
+      "description": "Limit output to first N lines/entries, equivalent to \"| head -N\". Works across all output modes: content (limits output lines), files_with_matches (limits file paths), count (limits count entries). Defaults based on \"cap\" experiment value: 0 (unlimited), 20, or 100."
+    },
+    "offset": {
+      "type": "number",
+      "description": "Skip first N lines/entries before applying head_limit, equivalent to \"| tail -n +N | head -N\". Works across all output modes. Defaults to 0."
     },
     "multiline": {
       "type": "boolean",

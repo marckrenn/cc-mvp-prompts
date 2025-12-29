@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.31
+# Claude Code Flags 2.0.32
 
 ## Feature Gates
 
@@ -8,12 +8,9 @@
 - `tengu_bash_command_backgrounded`
 - `tengu_bash_command_timeout_backgrounded`
 - `tengu_disable_bypass_permissions_mode`
-- `tengu_framework_detection_on_file_read`
 - `tengu_gha_plugin_code_review`
-- `tengu_halloween`
 - `tengu_migrate_ignore_patterns`
 - `tengu_native_installation`
-- `tengu_skip_file_edit_safety_checks`
 - `tengu_streaming_tool_execution`
 - `tengu_tool_pear`
 
@@ -33,5 +30,6 @@
 - `prompt_cache_1h_experiment`
 - `sonnet_1m_default`
 - `sonnet_45_1m_header`
+- `tengu_cap_grep_results`
 - `tengu_haiku_default_pro_plan`
 - `trust_folder_dialog_copy`
