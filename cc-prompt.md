@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.110
+# Claude Code Version 1.0.111
 
-Release Date: 2025-09-09
+Release Date: 2025-09-10
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-09-10T00:28:49.139Z is the date. Write a haiku about it.
+2025-09-11T00:01:55.633Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -175,17 +175,18 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 - When WebFetch returns a message about a redirect to a different host, you should immediately make a new WebFetch request with the redirect URL provided in the response.
 - You have the capability to call multiple tools in a single response. When multiple independent pieces of information are requested, batch your tool calls together for optimal performance. When making multiple bash tool calls, you MUST send a single message with multiple tools calls to run the calls in parallel. For example, if you need to run "git status" and "git diff", send a single message with two tool calls to run the calls in parallel.
+- If the user specifies that they want you to run tools "in parallel", you MUST send a single message with multiple tool use content blocks. For example, if you need to launch multiple agents in parallel, send a single message with multiple Task tool calls.
 
 
 
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1757464126811-1eli68
+Working directory: /tmp/claude-history-1757548913447-nodqv5
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-09-10
+Today's date: 2025-09-11
 </env>
 You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
@@ -791,6 +792,7 @@ Usage notes:
 4. The agent's outputs should generally be trusted
 5. Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent
 6. If the agent description mentions that it should be used proactively, then you should try your best to use it without the user having to ask for it first. Use your judgement.
+7. If the user specifies that they want you to run agents "in parallel", you MUST send a single message with multiple Task tool use content blocks. For example, if you need to launch both a code-reviewer agent and a test-runner agent in parallel, send a single message with both tool calls.
 
 Example usage:
 
