@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.59
+# Claude Code Flags 2.0.60
 
 ## Feature Gates
 
@@ -6,6 +6,7 @@
 - `tengu_backstage_only`
 - `tengu_bash_command_backgrounded`
 - `tengu_bash_command_timeout_backgrounded`
+- `tengu_compact_mc_files`
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_enable_versioned_plugins`
 - `tengu_gha_plugin_code_review`
@@ -36,6 +37,6 @@
 - `tengu_deep_ocean_current`
 - `tengu_effort_exp`
 - `tengu_file_edit_optimization`
-- `tengu_haiku_default_pro_plan`
+- `tengu_opus_default_pro_plan`
 - `tool_use_examples`
 - `trust_folder_dialog_copy`
