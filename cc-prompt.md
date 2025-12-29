@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.17
+# Claude Code Version 2.0.18
 
 Release Date: 2025-10-15
 
 # User Message
 
-2025-10-20T16:28:57.731Z is the date. Write a haiku about it.
+2025-10-20T16:29:06.513Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -108,7 +108,7 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1760977735615-npczn7
+Working directory: /tmp/claude-history-1760977744215-haqezh
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
@@ -675,7 +675,7 @@ Available agent types and the tools they have access to:
 - general-purpose: General-purpose agent for researching complex questions, searching for code, and executing multi-step tasks. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries use this agent to perform the search for you. (Tools: *)
 - statusline-setup: Use this agent to configure the user's Claude Code status line setting. (Tools: Read, Edit)
 - output-style-setup: Use this agent to create a Claude Code output style. (Tools: Read, Write, Edit, Glob, Grep)
-- Explore: Fast agent specialized for exploring codebases. Use this when you need to quickly find files by patterns (eg. "src/components/**/*.tsx"), search code for keywords (eg. "API endpoints"), or answer questions about the codebase (eg. "how do API endpoints work?") (Tools: Glob, Grep, Read, Bash)
+- Explore: Fast agent specialized for exploring codebases. Use this when you need to quickly find files by patterns (eg. "src/components/**/*.tsx"), search code for keywords (eg. "API endpoints"), or answer questions about the codebase (eg. "how do API endpoints work?"). When calling this agent, specify the desired thoroughness level: "quick" for basic searches, "medium" for moderate exploration, or "very thorough" for comprehensive analysis across multiple locations and naming conventions. (Tools: Glob, Grep, Read, Bash)
 
 When using the Task tool, you must specify a subagent_type parameter to select which agent type to use.
 

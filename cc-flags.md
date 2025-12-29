@@ -1,10 +1,12 @@
-# Claude Code Flags 2.0.17
+# Claude Code Flags 2.0.18
 
 ## Feature Gates
 
 - `auto_migrate_to_native`
 - `force_local_installation_migration`
 - `tengu_auto_checkpointing`
+- `tengu_bash_command_backgrounded`
+- `tengu_bash_command_timeout_backgrounded`
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_native_installation`
 - `tengu_tool_pear`
