@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.21
+# Claude Code Flags 2.0.22
 
 ## Feature Gates
 
@@ -9,6 +9,7 @@
 - `tengu_bash_command_timeout_backgrounded`
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_native_installation`
+- `tengu_skip_file_edit_safety_checks`
 - `tengu_tool_pear`
 
 ## Dynamic Configs
