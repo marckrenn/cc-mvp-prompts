@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.58
+# Claude Code Version 2.0.59
 
-Release Date: 2025-12-03
+Release Date: 2025-12-04
 
 # User Message
 
-2025-12-03T20:13:10.576Z is the date. Write a haiku about it.
+2025-12-05T01:51:06.145Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -131,11 +131,11 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1764792788304-z1hp73
+Working directory: /tmp/claude-history-1764899464350-arl58m
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-12-03
+Today's date: 2025-12-05
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -1241,7 +1241,7 @@ Usage notes:
   - Web search is only available in the US
 
 IMPORTANT - Use the correct year in search queries:
-  - Today's date is 2025-12-03. You MUST use this year when searching for recent information, documentation, or current events.
+  - Today's date is 2025-12-05. You MUST use this year when searching for recent information, documentation, or current events.
   - Example: If today is 2025-07-15 and the user asks for "latest React docs", search for "React documentation 2025", NOT "React documentation 2024"
 
 {
