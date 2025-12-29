@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.80
+# Claude Code Version 1.0.81
 
-Release Date: 2025-08-13
+Release Date: 2025-08-14
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-08-14T12:52:55.205Z is the date. Write a haiku about it.
+2025-08-14T17:04:42.268Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -178,7 +178,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1755175972666-5et6b5
+Working directory: /tmp/claude-history-1755191079323-blekwe
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
@@ -243,8 +243,6 @@ Usage notes:
     <bad-example>
     cd /foo/bar && pytest tests
     </bad-example>
-
-
 
 
 ### Committing changes with git
@@ -799,7 +797,7 @@ Launch a new agent to handle complex, multi-step tasks autonomously.
 Available agent types and the tools they have access to:
 - general-purpose: General-purpose agent for researching complex questions, searching for code, and executing multi-step tasks. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries use this agent to perform the search for you. (Tools: *)
 - statusline-setup: Use this agent to configure the user's Claude Code status line setting. (Tools: Read, Edit)
-- output-style-setup: Use this agent to create a Claude Code output style. (Tools: Read, Write, Edit, Glob, LS)
+- output-style-setup: Use this agent to create a Claude Code output style. (Tools: Read, Write, Edit, Glob, LS, Grep)
 
 When using the Task tool, you must specify a subagent_type parameter to select which agent type to use.
 
