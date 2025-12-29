@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.10
+# Claude Code Flags 2.0.11
 
 ## Feature Gates
 
@@ -16,8 +16,9 @@
 - `prompt_cache_1h_experiment`
 - `sonnet_45_1m_header`
 - `tengu_auto_checkpointing`
+- `tengu_disable_bypass_permissions_mode`
 - `tengu_native_installation`
-- `tengu_show_all_subscription_types`
+- `tengu_tool_pear`
 - `thinking_on_default`
 
 ## Dynamic Configs
