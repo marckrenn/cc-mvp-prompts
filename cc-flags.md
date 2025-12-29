@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.73
+# Claude Code Flags 2.0.74
 
 ## Feature Gates
 
@@ -24,7 +24,6 @@
 - `tengu_thinkback`
 - `tengu_tool_pear`
 - `tengu_tool_result_persistence`
-- `tengu_vscode_review_upsell`
 
 ## Dynamic Configs
 
