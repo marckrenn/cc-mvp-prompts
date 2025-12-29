@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.72
+# Claude Code Version 1.0.73
 
-Release Date: 2025-08-08
+Release Date: 2025-08-11
 
 # User Message
 
@@ -178,11 +178,11 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754678246591-0yzdkp
+Working directory: /tmp/claude-history-1754985245548-qrwcif
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-60-generic
-Today's date: 2025-08-08
+Today's date: 2025-08-12
 </env>
 You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
