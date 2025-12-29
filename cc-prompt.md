@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.51
+# Claude Code Version 1.0.52
 
-Release Date: 2025-07-11
+Release Date: 2025-07-15
 
 # User Message
 
@@ -174,7 +174,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179932705-8g1bmz
+Working directory: /tmp/claude-history-1754179937556-i233qf
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
