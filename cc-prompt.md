@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.19
+# Claude Code Version 2.0.20
 
-Release Date: 2025-10-15
+Release Date: 2025-10-16
 
 # User Message
 
-2025-10-20T16:29:15.486Z is the date. Write a haiku about it.
+2025-10-20T16:29:24.586Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -108,7 +108,7 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1760977753038-crl7i2
+Working directory: /tmp/claude-history-1760977761876-6ul21x
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
@@ -619,6 +619,49 @@ Usage:
   },
   "required": [
     "file_path"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
+
+---
+
+## Skill
+
+Execute a skill within the main conversation
+
+<skills_instructions>
+When users ask you to perform tasks, check if any of the available skills below can help complete the task more effectively. Skills provide specialized capabilities and domain knowledge.
+
+How to use skills:
+- Invoke skills using this tool with the skill name only (no arguments)
+- When you invoke a skill, you will see <command-message>The "{name}" skill is loading</command-message>
+- The skill's prompt will expand and provide detailed instructions on how to complete the task
+- Examples:
+  - `command: "pdf"` - invoke the pdf skill
+  - `command: "xlsx"` - invoke the xlsx skill
+  - `command: "ms-office-suite:pdf"` - invoke using fully qualified name
+
+Important:
+- Only use skills listed in <available_skills> below
+- Do not invoke a skill that is already running
+- Do not use this tool for built-in CLI commands (like /help, /clear, etc.)
+</skills_instructions>
+
+<available_skills>
+
+</available_skills>
+
+{
+  "type": "object",
+  "properties": {
+    "command": {
+      "type": "string",
+      "description": "The skill name (no arguments). E.g., \"pdf\" or \"xlsx\""
+    }
+  },
+  "required": [
+    "command"
   ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
