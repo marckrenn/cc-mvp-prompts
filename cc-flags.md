@@ -1,10 +1,9 @@
-# Claude Code Flags 2.0.44
+# Claude Code Flags 2.0.45
 
 ## Feature Gates
 
 - `auto_migrate_to_native`
 - `force_local_installation_migration`
-- `tengu_auto_checkpointing`
 - `tengu_bash_command_backgrounded`
 - `tengu_bash_command_timeout_backgrounded`
 - `tengu_disable_bypass_permissions_mode`
@@ -15,6 +14,7 @@
 - `tengu_streaming_tool_execution`
 - `tengu_tool_pear`
 - `tengu_vscode_review_upsell`
+- `tengu_web_tasks`
 
 ## Dynamic Configs
 
@@ -28,6 +28,7 @@
 - `cc_onboarding_github`
 - `cc_onboarding_hide_workspace`
 - `cc_onboarding_init_modal`
+- `claude_code_overages_upgrade_cta`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
 - `sonnet_1m_default`
