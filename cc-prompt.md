@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.33
+# Claude Code Version 1.0.34
 
-Release Date: 2025-06-23
+Release Date: 2025-06-24
 
 # User Message
 
@@ -166,6 +166,8 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 - Tool results and user messages may include <system-reminder> tags. <system-reminder> tags contain useful information and reminders. They are NOT part of the user's provided input or the tool result.
 
+
+
 ## Tool usage policy
 - When doing file search, prefer to use the Task tool in order to reduce context usage.
 - You have the capability to call multiple tools in a single response. When multiple independent pieces of information are requested, batch your tool calls together for optimal performance. When making multiple bash tool calls, you MUST send a single message with multiple tools calls to run the calls in parallel. For example, if you need to run "git status" and "git diff", send a single message with two tool calls to run the calls in parallel.
@@ -175,7 +177,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179836136-u620w0
+Working directory: /tmp/claude-history-1754179841350-7sp5ha
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
