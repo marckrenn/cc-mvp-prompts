@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.100
+# Claude Code Version 1.0.102
 
-Release Date: 2025-09-01
+Release Date: 2025-09-02
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-09-01T22:46:12.398Z is the date. Write a haiku about it.
+2025-09-02T23:40:26.836Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -176,13 +176,13 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1756766770139-380lq4
+Working directory: /tmp/claude-history-1756856424707-jwbb02
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-09-01
+Today's date: 2025-09-02
 </env>
-You are powered by the model named Opus 4.1. The exact model ID is claude-opus-4-1-20250805.
+You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
 Assistant knowledge cutoff is January 2025.
 
@@ -332,7 +332,7 @@ Important:
     },
     "description": {
       "type": "string",
-      "description": " Clear, concise description of what this command does in 5-10 words. Examples:\nInput: ls\nOutput: Lists files in current directory\n\nInput: git status\nOutput: Shows working tree status\n\nInput: npm install\nOutput: Installs package dependencies\n\nInput: mkdir foo\nOutput: Creates directory 'foo'"
+      "description": "Clear, concise description of what this command does in 5-10 words, in active voice. Examples:\nInput: ls\nOutput: List files in current directory\n\nInput: git status\nOutput: Show working tree status\n\nInput: npm install\nOutput: Install package dependencies\n\nInput: mkdir foo\nOutput: Create directory 'foo'"
     },
     "run_in_background": {
       "type": "boolean",
