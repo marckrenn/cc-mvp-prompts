@@ -1,7 +1,7 @@
 # Claude Code Changelog
 
-[![Status](https://status.marckrenn.dev/api/badge/3/status)](https://status.marckrenn.dev/status/cchbot)
-[![Uptime](https://status.marckrenn.dev/api/badge/3/uptime)](https://status.marckrenn.dev/status/cchbot)
+[![Status](https://status.marckrenn.dev/api/badge/3/status)](https://status.marckrenn.dev/status/claudecodechangelog)
+[![Uptime](https://status.marckrenn.dev/api/badge/3/uptime)](https://status.marckrenn.dev/status/claudecodechangelog)
 
 This repository tracks changes to [Claude Code](https://docs.anthropic.com/en/docs/claude-code)'s system prompt and feature flags across versions.
 
