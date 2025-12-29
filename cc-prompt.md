@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.73
+# Claude Code Version 1.0.74
 
-Release Date: 2025-08-11
+Release Date: 2025-08-12
 
 # User Message
 
@@ -178,7 +178,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754985245548-qrwcif
+Working directory: /tmp/claude-history-1755015939046-wne8lx
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-60-generic
@@ -799,6 +799,7 @@ Launch a new agent to handle complex, multi-step tasks autonomously.
 Available agent types and the tools they have access to:
 - general-purpose: General-purpose agent for researching complex questions, searching for code, and executing multi-step tasks. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries use this agent to perform the search for you. (Tools: *)
 - statusline-setup: Use this agent to configure the user's Claude Code status line setting. (Tools: Read, Edit)
+- output-mode-setup: Use this agent to create a Claude Code output mode. (Tools: Read, Write, Edit, Glob, LS)
 
 When using the Task tool, you must specify a subagent_type parameter to select which agent type to use.
 
