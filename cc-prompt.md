@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.112
+# Claude Code Version 1.0.113
 
-Release Date: 2025-09-12
+Release Date: 2025-09-13
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-09-12T01:18:25.434Z is the date. Write a haiku about it.
+2025-09-13T02:41:44.834Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -182,11 +182,11 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1757639903353-hf3pjc
+Working directory: /tmp/claude-history-1757731302772-8gxcxk
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-09-12
+Today's date: 2025-09-13
 </env>
 You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
@@ -562,7 +562,7 @@ A powerful search tool built on ripgrep
 
 ---
 
-## KillBash
+## KillShell
 
 
 - Kills a running background bash shell by its ID
