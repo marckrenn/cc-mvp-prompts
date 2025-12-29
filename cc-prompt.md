@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.31
+# Claude Code Version 1.0.32
 
-Release Date: 2025-06-20
+Release Date: 2025-06-23
 
 # User Message
 
@@ -175,7 +175,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179826164-22i7ax
+Working directory: /tmp/claude-history-1754179831168-08sojn
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -388,7 +388,13 @@ Usage:
 
 ## exit_plan_mode
 
-Use this tool when you are in plan mode and have finished presenting your plan and are ready to code. This will prompt the user to exit plan mode.
+Use this tool when you are in plan mode and have finished presenting your plan and are ready to code. This will prompt the user to exit plan mode. 
+IMPORTANT: Only use this tool when the task requires planning the implementation steps of a task that requires writing code. For research tasks where you're gathering information, searching files, reading files or in general trying to understand the codebase - do NOT use this tool.
+
+Eg. 
+1. Initial task: "Search for and understand the implementation of vim mode in the codebase" - Do not use the exit plan mode tool because you are not planning the implementation steps of a task.
+2. Initial task: "Help me implement yank mode for vim" - Use the exit plan mode tool after you have finished planning the implementation steps of the task.
+
 {
   "type": "object",
   "properties": {
