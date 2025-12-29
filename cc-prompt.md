@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.35
+# Claude Code Version 1.0.36
 
-Release Date: 2025-06-25
+Release Date: 2025-06-27
 
 # User Message
 
@@ -172,7 +172,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179846168-9fnzfd
+Working directory: /tmp/claude-history-1754179851468-3j2z1n
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -1055,6 +1055,7 @@ Usage notes:
 Usage notes:
   - Domain filtering is supported to include or block specific websites
   - Web search is only available in the US
+  - Account for "Today's date" in <env>
 
 {
   "type": "object",
