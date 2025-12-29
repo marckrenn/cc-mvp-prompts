@@ -1,12 +1,9 @@
-# Claude Code Flags 1.0.7
+# Claude Code Flags 1.0.8
 
 ## Feature Gates
 
 - `claude_code_unicode_sanitize`
-- `contents_identical`
 - `force_local_installation_migration`
-- `missing_file_edits`
-- `tool_use_invalid`
 
 ## Dynamic Configs
 
