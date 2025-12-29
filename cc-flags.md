@@ -1,4 +1,4 @@
-# Claude Code Flags 1.0.108
+# Claude Code Flags 1.0.109
 
 ## Feature Gates
 
@@ -6,9 +6,11 @@
 - `claude_code_unicode_sanitize`
 - `force_local_installation_migration`
 - `tengu_auto_checkpointing`
+- `tengu_disable_bypass_permissions_mode`
 - `tengu_metrics_exporter_enabled`
 - `tengu_native_installation`
 - `tengu_show_all_subscription_types`
+- `tengu_use_file_checkpoints`
 
 ## Dynamic Configs
 
