@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.71
+# Claude Code Version 2.0.72
 
-Release Date: 2025-12-16
+Release Date: 2025-12-17
 
 # User Message
 
-2025-12-16T22:15:07.442Z is the date. Write a haiku about it.
+2025-12-17T22:04:01.215Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -152,11 +152,11 @@ assistant: Clients are marked as failed in the `connectToServer` function in src
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1765923305657-05by67
+Working directory: /tmp/claude-history-1766009039295-rmmdc7
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-12-16
+Today's date: 2025-12-17
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -947,6 +947,7 @@ When NOT to use the Task tool:
 
 
 Usage notes:
+- Always include a short description (3-5 words) summarizing what the agent will do
 - Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses
 - When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result.
 - You can optionally run agents in the background using the run_in_background parameter. When an agent runs in the background, you will need to use TaskOutput to retrieve its results once it's done. You can continue to work while background agents run - When you need their results to continue you can use TaskOutput in blocking mode to pause and wait for their results.
@@ -1375,7 +1376,7 @@ Usage notes:
   - Web search is only available in the US
 
 IMPORTANT - Use the correct year in search queries:
-  - Today's date is 2025-12-16. You MUST use this year when searching for recent information, documentation, or current events.
+  - Today's date is 2025-12-17. You MUST use this year when searching for recent information, documentation, or current events.
   - Example: If today is 2025-07-15 and the user asks for "latest React docs", search for "React documentation 2025", NOT "React documentation 2024"
 
 {

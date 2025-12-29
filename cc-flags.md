@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.71
+# Claude Code Flags 2.0.72
 
 ## Feature Gates
 
@@ -10,7 +10,6 @@
 - `tengu_compact_mc_files`
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_gha_plugin_code_review`
-- `tengu_log_1p_events`
 - `tengu_native_installation`
 - `tengu_prompt_suggestion`
 - `tengu_session_memory`
@@ -30,7 +29,6 @@
 ## Experiments
 
 - `cache_warming`
-- `cc_microcompact_ext`
 - `hide_overages_option_at_rate_limit_hit`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
