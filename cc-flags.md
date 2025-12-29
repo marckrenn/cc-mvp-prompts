@@ -1,8 +1,11 @@
-# Claude Code Flags 2.0.72
+# Claude Code Flags 2.0.73
 
 ## Feature Gates
 
 - `auto_migrate_to_native`
+- `doorbell_bottle`
+- `persimmon_marble_flag`
+- `strawberry_granite_flag`
 - `tengu_ant_attribution_header_new`
 - `tengu_bash_command_backgrounded`
 - `tengu_bash_command_timeout_backgrounded`
@@ -10,7 +13,9 @@
 - `tengu_compact_mc_files`
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_gha_plugin_code_review`
+- `tengu_mcp_tool_search`
 - `tengu_native_installation`
+- `tengu_pid_based_version_locking`
 - `tengu_prompt_suggestion`
 - `tengu_session_memory`
 - `tengu_sm_compact`
