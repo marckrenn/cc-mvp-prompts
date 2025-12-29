@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.56
+# Claude Code Flags 2.0.57
 
 ## Feature Gates
 
@@ -7,6 +7,7 @@
 - `tengu_bash_command_backgrounded`
 - `tengu_bash_command_timeout_backgrounded`
 - `tengu_disable_bypass_permissions_mode`
+- `tengu_enable_versioned_plugins`
 - `tengu_gha_plugin_code_review`
 - `tengu_log_1p_events`
 - `tengu_native_installation`
@@ -25,9 +26,6 @@
 
 - `cache_warming`
 - `cc_microcompact_ext`
-- `cc_onboarding_github`
-- `cc_onboarding_hide_workspace`
-- `cc_onboarding_init_modal`
 - `claude_code_overages_upgrade_cta`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
