@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.63
+# Claude Code Version 1.0.64
 
-Release Date: 2025-07-29
+Release Date: 2025-07-30
 
 # User Message
 
@@ -169,7 +169,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 ## Tool usage policy
 - When doing file search, prefer to use the Task tool in order to reduce context usage.
 - You should proactively use the Task tool with specialized agents when the task at hand matches the agent's description.
-- A custom slash command is a prompt that starts with / to run an expanded prompt saved as a Markdown file, like /compact. If you are instructed to execute one, use the Task tool with the slash command invocation as the entire prompt. Slash commands can take arguments; defer to user instructions.
+
 - When WebFetch returns a message about a redirect to a different host, you should immediately make a new WebFetch request with the redirect URL provided in the response.
 - You have the capability to call multiple tools in a single response. When multiple independent pieces of information are requested, batch your tool calls together for optimal performance. When making multiple bash tool calls, you MUST send a single message with multiple tools calls to run the calls in parallel. For example, if you need to run "git status" and "git diff", send a single message with two tool calls to run the calls in parallel.
 
@@ -178,7 +178,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754180019407-b1gt08
+Working directory: /tmp/claude-history-1754180024638-hehic5
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -762,8 +762,7 @@ Available agent types and the tools they have access to:
 
 When using the Task tool, you must specify a subagent_type parameter to select which agent type to use.
 
-When to use the Agent tool:
-- When you are instructed to execute custom slash commands. Use the Agent tool with the slash command invocation as the entire prompt. The slash command can take arguments. For example: Task(description="Check the file", prompt="/check-file path/to/file.py")
+
 
 When NOT to use the Agent tool:
 - If you want to read a specific file path, use the Read or Glob tool instead of the Agent tool, to find the match more quickly
