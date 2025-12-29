@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.22
+# Claude Code Version 2.0.23
 
-Release Date: 2025-10-17
+Release Date: 2025-10-20
 
 # User Message
 
-2025-10-20T16:29:42.318Z is the date. Write a haiku about it.
+2025-10-20T17:58:48.101Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -108,7 +108,7 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1760977780016-s7befv
+Working directory: /tmp/claude-history-1760983125065-r4q6d7
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
