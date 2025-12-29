@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.118
+# Claude Code Version 1.0.119
 
-Release Date: 2025-09-17
+Release Date: 2025-09-18
 
 # User Message
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-09-19T00:58:36.140Z is the date. Write a haiku about it.
+2025-09-19T00:58:44.719Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -165,8 +165,7 @@ The user will primarily request you perform software engineering tasks. This inc
 - VERY IMPORTANT: When you have completed a task, you MUST run the lint and typecheck commands (eg. npm run lint, npm run typecheck, ruff, etc.) with Bash if they were provided to you to ensure your code is correct. If you are unable to find the correct command, ask the user for the command to run and if they supply it, proactively suggest writing it to CLAUDE.md so that you will know to run it next time.
 NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTANT to only commit when explicitly asked, otherwise the user will feel that you are being too proactive.
 
-- Tool results and user messages may include <system-reminder> tags. <system-reminder> tags contain useful information and reminders. They are NOT part of the user's provided input or the tool result.
-
+- Tool results and user messages may include <system-reminder> tags. <system-reminder> tags contain useful information and reminders. They are automatically added by the system, and bear no direct relation to the specific tool results or user messages in which they appear.
 
 
 ## Tool usage policy
@@ -182,7 +181,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1758243513631-xgz02e
+Working directory: /tmp/claude-history-1758243522711-jdmndx
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
