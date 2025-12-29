@@ -1,13 +1,21 @@
-# Claude Code Flags 1.0.115
+# Claude Code Flags 1.0.116
 
 ## Feature Gates
 
 - `auto_migrate_to_native`
+- `cache_warming`
+- `cc_onboarding_github`
+- `cc_onboarding_hide_claudemd`
+- `cc_onboarding_hide_questions_changes`
+- `cc_onboarding_hide_terminal`
+- `cc_onboarding_hide_workspace`
+- `cc_plan_mode_first_session`
 - `claude_code_unicode_sanitize`
 - `force_local_installation_migration`
+- `max_user_opusplan`
+- `new_max_user_default_model`
 - `tengu_auto_checkpointing`
 - `tengu_disable_bypass_permissions_mode`
-- `tengu_metrics_exporter_enabled`
 - `tengu_native_installation`
 - `tengu_show_all_subscription_types`
 - `tengu_use_file_checkpoints`
