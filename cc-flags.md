@@ -1,4 +1,4 @@
-# Claude Code Flags 1.0.64
+# Claude Code Flags 1.0.65
 
 ## Feature Gates
 
@@ -10,7 +10,8 @@
 
 ## Dynamic Configs
 
-_None detected_
+- `tengu_feedback_survey_config`
+- `tengu_spinner_words`
 
 ## Experiments
 
