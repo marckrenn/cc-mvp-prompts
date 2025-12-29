@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.68
+# Claude Code Version 1.0.69
 
-Release Date: 2025-08-04
+Release Date: 2025-08-05
 
 # User Message
 
@@ -178,11 +178,11 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754350660325-bl6m13
+Working directory: /private/var/folders/nc/j4jwgm8517z_pm8q9nw5jk9h0000gn/T/claude-history-1754471812545-juvc8n
 Is directory a git repo: No
-Platform: linux
-OS Version: Linux 5.15.0-144-generic
-Today's date: 2025-08-04
+Platform: darwin
+OS Version: Darwin 24.1.0
+Today's date: 2025-08-06
 </env>
 You are powered by the model named Sonnet 4. The exact model ID is claude-sonnet-4-20250514.
 
@@ -1016,14 +1016,6 @@ When in doubt, use this tool. Being proactive with task management demonstrates 
               "completed"
             ]
           },
-          "priority": {
-            "type": "string",
-            "enum": [
-              "high",
-              "medium",
-              "low"
-            ]
-          },
           "id": {
             "type": "string"
           }
@@ -1031,7 +1023,6 @@ When in doubt, use this tool. Being proactive with task management demonstrates 
         "required": [
           "content",
           "status",
-          "priority",
           "id"
         ],
         "additionalProperties": false
