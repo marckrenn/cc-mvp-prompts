@@ -1,4 +1,4 @@
-# Claude Code Version 1.0.122
+# Claude Code Version 1.0.123
 
 Release Date: 2025-09-23
 
@@ -16,7 +16,7 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 
-2025-09-23T23:53:26.460Z is the date. Write a haiku about it.
+2025-09-23T23:53:35.279Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -181,7 +181,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1758671603493-nqfiu5
+Working directory: /tmp/claude-history-1758671613222-epdvi3
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
