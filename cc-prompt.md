@@ -1,4 +1,4 @@
-# Claude Code Version 1.0.74
+# Claude Code Version 1.0.76
 
 Release Date: 2025-08-12
 
@@ -178,7 +178,7 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1755015939046-wne8lx
+Working directory: /tmp/claude-history-1755026112084-o12gk7
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-60-generic
