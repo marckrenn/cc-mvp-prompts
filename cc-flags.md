@@ -1,4 +1,4 @@
-# Claude Code Flags 1.0.76
+# Claude Code Flags 1.0.77
 
 ## Feature Gates
 
@@ -6,7 +6,6 @@
 - `force_local_installation_migration`
 - `tengu_metrics_exporter_enabled`
 - `tengu_native_installation`
-- `tengu_spinner_tips_enabled`
 
 ## Dynamic Configs
 
