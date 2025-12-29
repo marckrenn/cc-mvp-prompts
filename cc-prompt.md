@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.44
+# Claude Code Version 1.0.45
 
-Release Date: 2025-07-07
+Release Date: 2025-07-08
 
 # User Message
 
@@ -171,9 +171,10 @@ NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTAN
 You MUST answer concisely with fewer than 4 lines of text (not including tool use or code generation), unless user asks for detail.
 
 
+
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179896260-icfp3c
+Working directory: /tmp/claude-history-1754179901689-b7msub
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -441,15 +442,16 @@ Eg.
 
 ## Grep
 
+A powerful search tool built on ripgrep
 
-- Fast content search tool that works with any codebase size
-- Searches file contents using regular expressions
-- Supports full regex syntax (eg. "log.*Error", "function\s+\w+", etc.)
-- Filter files by pattern with the include parameter (eg. "*.js", "*.{ts,tsx}")
-- Returns file paths with at least one match sorted by modification time
-- Use this tool when you need to find files containing specific patterns
-- If you need to identify/count the number of matches within files, use the Bash tool with `rg` (ripgrep) directly. Do NOT use `grep`.
-- When you are doing an open ended search that may require multiple rounds of globbing and grepping, use the Agent tool instead
+  Usage:
+  - ALWAYS use Grep for search tasks. NEVER invoke `grep` or `rg` as a Bash command. The Grep tool has been optimized for correct permissions and access.
+  - Supports full regex syntax (e.g., "log.*Error", "function\s+\w+")
+  - Filter files with glob parameter (e.g., "*.js", "**/*.tsx") or type parameter (e.g., "js", "py", "rust")
+  - Output modes: "content" shows matching lines, "files_with_matches" shows only file paths (default), "count" shows match counts
+  - Use Task tool for open-ended searches requiring multiple rounds
+  - Pattern syntax: Uses ripgrep (not grep) - literal braces need escaping (use `interface\{\}` to find `interface{}` in Go code)
+  - Multiline matching: By default patterns match within single lines only. For cross-line patterns like `struct \{[\s\S]*?field`, use `multiline: true`
 
 {
   "type": "object",
@@ -460,11 +462,52 @@ Eg.
     },
     "path": {
       "type": "string",
-      "description": "The directory to search in. Defaults to the current working directory."
+      "description": "File or directory to search in (rg PATH). Defaults to current working directory."
     },
-    "include": {
+    "glob": {
       "type": "string",
-      "description": "File pattern to include in the search (e.g. \"*.js\", \"*.{ts,tsx}\")"
+      "description": "Glob pattern to filter files (e.g. \"*.js\", \"*.{ts,tsx}\") - maps to rg --glob"
+    },
+    "output_mode": {
+      "type": "string",
+      "enum": [
+        "content",
+        "files_with_matches",
+        "count"
+      ],
+      "description": "Output mode: \"content\" shows matching lines (supports -A/-B/-C context, -n line numbers, head_limit), \"files_with_matches\" shows file paths (supports head_limit), \"count\" shows match counts (supports head_limit). Defaults to \"files_with_matches\"."
+    },
+    "-B": {
+      "type": "number",
+      "description": "Number of lines to show before each match (rg -B). Requires output_mode: \"content\", ignored otherwise."
+    },
+    "-A": {
+      "type": "number",
+      "description": "Number of lines to show after each match (rg -A). Requires output_mode: \"content\", ignored otherwise."
+    },
+    "-C": {
+      "type": "number",
+      "description": "Number of lines to show before and after each match (rg -C). Requires output_mode: \"content\", ignored otherwise."
+    },
+    "-n": {
+      "type": "boolean",
+      "description": "Show line numbers in output (rg -n). Requires output_mode: \"content\", ignored otherwise."
+    },
+    "-i": {
+      "type": "boolean",
+      "description": "Case insensitive search (rg -i)"
+    },
+    "type": {
+      "type": "string",
+      "description": "File type to search (rg --type). Common types: js, py, rust, go, java, etc. More efficient than include for standard file types."
+    },
+    "head_limit": {
+      "type": "number",
+      "description": "Limit output to first N lines/entries, equivalent to \"| head -N\". Works across all output modes: content (limits output lines), files_with_matches (limits file paths), count (limits count entries). When unspecified, shows all results from ripgrep."
+    },
+    "multiline": {
+      "type": "boolean",
+      "description": "Enable multiline mode where . matches newlines and patterns can span lines (rg -U --multiline-dotall). Default: false."
     }
   },
   "required": [
