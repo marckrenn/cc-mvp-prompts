@@ -1,6 +1,6 @@
-# Claude Code Version 1.0.56
+# Claude Code Version 1.0.57
 
-Release Date: 2025-07-18
+Release Date: 2025-07-21
 
 # User Message
 
@@ -175,7 +175,7 @@ You MUST answer concisely with fewer than 4 lines of text (not including tool us
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1754179960409-4vme13
+Working directory: /tmp/claude-history-1754179965936-lw1roo
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 5.15.0-144-generic
@@ -387,7 +387,7 @@ Usage:
 
 ---
 
-## exit_plan_mode
+## ExitPlanMode
 
 Use this tool when you are in plan mode and have finished presenting your plan and are ready to code. This will prompt the user to exit plan mode. 
 IMPORTANT: Only use this tool when the task requires planning the implementation steps of a task that requires writing code. For research tasks where you're gathering information, searching files, reading files or in general trying to understand the codebase - do NOT use this tool.
@@ -751,7 +751,7 @@ Usage:
 
 ## Task
 
-Launch a new agent that has access to the following tools: Bash, Glob, Grep, LS, exit_plan_mode, Read, Edit, MultiEdit, Write, NotebookRead, NotebookEdit, WebFetch, TodoWrite, WebSearch. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries, use the Agent tool to perform the search for you.
+Launch a new agent that has access to the following tools: Bash, Glob, Grep, LS, ExitPlanMode, Read, Edit, MultiEdit, Write, NotebookRead, NotebookEdit, WebFetch, TodoWrite, WebSearch. When you are searching for a keyword or file and are not confident that you will find the right match in the first few tries, use the Agent tool to perform the search for you.
 
 When to use the Agent tool:
 - If you are searching for a keyword like "config" or "logger", or for questions like "which file does X?", the Agent tool is strongly recommended
