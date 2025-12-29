@@ -1,7 +1,8 @@
-# Claude Code Flags 1.0.107
+# Claude Code Flags 1.0.108
 
 ## Feature Gates
 
+- `auto_migrate_to_native`
 - `claude_code_unicode_sanitize`
 - `force_local_installation_migration`
 - `tengu_auto_checkpointing`
