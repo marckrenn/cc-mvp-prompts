@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.14
+# Claude Code Version 2.0.15
 
-Release Date: 2025-10-10
+Release Date: 2025-10-14
 
 # User Message
 
-2025-10-20T16:28:39.439Z is the date. Write a haiku about it.
+2025-10-20T16:28:49.336Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -99,7 +99,7 @@ The user will primarily request you perform software engineering tasks. This inc
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1760977716925-qgrr5d
+Working directory: /tmp/claude-history-1760977726801-9kuheu
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
@@ -372,7 +372,8 @@ Usage:
 Use this tool when you are in plan mode and have finished presenting your plan and are ready to code. This will prompt the user to exit plan mode.
 IMPORTANT: Only use this tool when the task requires planning the implementation steps of a task that requires writing code. For research tasks where you're gathering information, searching files, reading files or in general trying to understand the codebase - do NOT use this tool.
 
-Eg.
+#### Examples
+
 1. Initial task: "Search for and understand the implementation of vim mode in the codebase" - Do not use the exit plan mode tool because you are not planning the implementation steps of a task.
 2. Initial task: "Help me implement yank mode for vim" - Use the exit plan mode tool after you have finished planning the implementation steps of the task.
 
