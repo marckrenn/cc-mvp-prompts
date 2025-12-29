@@ -1,4 +1,4 @@
-# Claude Code Flags 2.0.62
+# Claude Code Flags 2.0.63
 
 ## Feature Gates
 
@@ -11,8 +11,10 @@
 - `tengu_gha_plugin_code_review`
 - `tengu_log_1p_events`
 - `tengu_native_installation`
-- `tengu_show_extra_usage_bar`
+- `tengu_session_memory`
+- `tengu_sm_compact`
 - `tengu_streaming_tool_execution2`
+- `tengu_sumi`
 - `tengu_tool_pear`
 - `tengu_tool_result_persistence`
 - `tengu_vscode_review_upsell`
