@@ -1,10 +1,10 @@
-# Claude Code Version 2.0.53
+# Claude Code Version 2.0.54
 
 Release Date: 2025-11-25
 
 # User Message
 
-2025-11-25T02:00:47.983Z is the date. Write a haiku about it.
+2025-11-26T01:04:12.781Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -130,11 +130,11 @@ assistant: [Uses the Task tool with subagent_type=Explore]
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1764036045468-d05bbu
+Working directory: /tmp/claude-history-1764119050213-wryo4f
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2025-11-25
+Today's date: 2025-11-26
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -521,7 +521,7 @@ Before using this tool, ensure your plan is clear and unambiguous. If there are 
 {
   "type": "object",
   "properties": {},
-  "additionalProperties": false,
+  "additionalProperties": true,
   "$schema": "http://json-schema.org/draft-07/schema#"
 }
 
