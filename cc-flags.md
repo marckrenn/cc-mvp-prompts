@@ -1,4 +1,4 @@
-# Claude Code Flags 1.0.81
+# Claude Code Flags 1.0.82
 
 ## Feature Gates
 
@@ -7,6 +7,7 @@
 - `tengu_auto_checkpointing`
 - `tengu_metrics_exporter_enabled`
 - `tengu_native_installation`
+- `tengu_show_all_subscription_types`
 
 ## Dynamic Configs
 
