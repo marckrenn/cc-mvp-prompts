@@ -1,9 +1,10 @@
-# Claude Code Flags 2.0.5
+# Claude Code Flags 2.0.8
 
 ## Feature Gates
 
 - `auto_migrate_to_native`
 - `cache_warming`
+- `cc_microcompact_ext`
 - `cc_onboarding_github`
 - `cc_onboarding_hide_claudemd`
 - `cc_onboarding_hide_questions_changes`
@@ -14,6 +15,8 @@
 - `force_local_installation_migration`
 - `max_user_opusplan`
 - `new_max_user_default_model`
+- `prompt_cache_1h_experiment`
+- `sonnet_45_1m_header`
 - `tengu_ant_prompts`
 - `tengu_auto_checkpointing`
 - `tengu_disable_bypass_permissions_mode`
