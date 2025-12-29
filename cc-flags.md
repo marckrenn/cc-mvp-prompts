@@ -1,4 +1,4 @@
-# Claude Code Flags 1.0.120
+# Claude Code Flags 1.0.122
 
 ## Feature Gates
 
@@ -14,6 +14,7 @@
 - `force_local_installation_migration`
 - `max_user_opusplan`
 - `new_max_user_default_model`
+- `tengu_ant_prompts`
 - `tengu_auto_checkpointing`
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_native_installation`
