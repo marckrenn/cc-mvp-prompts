@@ -1,4 +1,4 @@
-# Claude Code Flags 2.1.2
+# Claude Code Flags 2.1.3
 
 ## Feature Gates
 
@@ -8,6 +8,8 @@
 - `tengu_disable_bypass_permissions_mode`
 - `tengu_native_installation`
 - `tengu_prompt_suggestion`
+- `tengu_scratch`
+- `tengu_session_index`
 - `tengu_session_memory`
 - `tengu_sm_compact`
 - `tengu_streaming_tool_execution2`
@@ -25,12 +27,10 @@ _None detected_
 
 - `cache_warming`
 - `hide_overages_option_at_rate_limit_hit`
-- `persimmon_marble_flag`
 - `preserve_thinking`
 - `prompt_cache_1h_experiment`
 - `sonnet_1m_default`
 - `sonnet_45_1m_header`
-- `strawberry_granite_flag`
 - `tengu_file_edit_optimization`
 - `tengu_mcp_tool_search`
 - `tengu_opus_default_pro_plan`
