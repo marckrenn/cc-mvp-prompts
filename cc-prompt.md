@@ -1,10 +1,10 @@
-# Claude Code Version 2.1.3
+# Claude Code Version 2.1.4
 
-Release Date: 2026-01-09
+Release Date: 2026-01-10
 
 # User Message
 
-2026-01-09T23:30:06.719Z is the date. Write a haiku about it.
+2026-01-11T00:31:18.719Z is the date. Write a haiku about it.
 
 # System Prompt
 
@@ -139,11 +139,11 @@ assistant: Clients are marked as failed in the `connectToServer` function in src
 
 Here is useful information about the environment you are running in:
 <env>
-Working directory: /tmp/claude-history-1768001404913-rsckrz
+Working directory: /tmp/claude-history-1768091476873-1oa64y
 Is directory a git repo: No
 Platform: linux
 OS Version: Linux 6.8.0-71-generic
-Today's date: 2026-01-09
+Today's date: 2026-01-11
 </env>
 You are powered by the model named Sonnet 4.5. The exact model ID is claude-sonnet-4-5-20250929.
 
@@ -287,6 +287,7 @@ Usage notes:
   - You can specify an optional timeout in milliseconds (up to 600000ms / 10 minutes). If not specified, commands will timeout after 120000ms (2 minutes).
   - It is very helpful if you write a clear, concise description of what this command does. For simple commands, keep it brief (5-10 words). For complex commands (piped commands, obscure flags, or anything hard to understand at a glance), add enough context to clarify what it does.
   - If the output exceeds 30000 characters, output will be truncated before being returned to you.
+  
   - You can use the `run_in_background` parameter to run the command in the background. Only use this if you don't need the result immediately and are OK being notified when the command completes later. You do not need to check the output right away - you'll be notified when it finishes. You do not need to use '&' at the end of the command when using this parameter.
   
   - Avoid using Bash with the `find`, `grep`, `cat`, `head`, `tail`, `sed`, `awk`, or `echo` commands, unless explicitly instructed or when these commands are truly necessary for the task. Instead, always prefer using the dedicated tools for these commands:
@@ -1358,7 +1359,7 @@ Usage notes:
   - Web search is only available in the US
 
 IMPORTANT - Use the correct year in search queries:
-  - Today's date is 2026-01-09. You MUST use this year when searching for recent information, documentation, or current events.
+  - Today's date is 2026-01-11. You MUST use this year when searching for recent information, documentation, or current events.
   - Example: If today is 2025-07-15 and the user asks for "latest React docs", search for "React documentation 2025", NOT "React documentation 2024"
 
 {
